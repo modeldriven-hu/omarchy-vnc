@@ -1,5 +1,12 @@
 # Omarchy VNC
 
+## Screenshot
+
+<img width="1598" height="860" alt="image" src="https://github.com/user-attachments/assets/a87c3589-1160-4e3c-a938-d48b982cd780" />
+
+
+## Description
+
 Omarchy VNC is a Rust VNC client for Omarchy. It connects to Macs using Apple
 Remote Desktop account authentication as well as ordinary VNC servers. Choose
 one of two viewers:
