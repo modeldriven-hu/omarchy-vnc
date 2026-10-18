@@ -1,5 +1,11 @@
 # Omarchy VNC
 
+## Screenshot
+
+<img width="1598" height="860" alt="image" src="https://github.com/user-attachments/assets/5a148296-28e4-48f1-81c2-a552423843a3" />
+
+## Description
+
 A Rust VNC application for Omarchy, with a shared core, a **Ratatui terminal connection manager**, and two graphical viewers:
 
 - **omarchy-vnc-egui** — egui/eframe with OpenGL; no GTK dependency.
@@ -176,22 +182,5 @@ server installed into your normal desktop. To check its protocol/cursor path wit
 ```sh
 cargo run -p omarchy-vnc-core --example local_probe -- 5909
 ```
-
-The user confirmed a successful Apple account login and Mac desktop rendering in egui.
-A later independent network probe returned “No route to host,” so local testing is now
-available without depending on Mac reachability. The missing cursor has been fixed and
-verified against real TigerVNC: the core receives a 1280×800 framebuffer and a 9×16 remote
-cursor. Confirmation of the updated cursor/form controls on the Mac, full keyboard/layout
-compatibility, headless/locked behavior, and sustained performance remains pending.
-Frames are limited to 8,294,400 pixels (4K UHD pixel count) and 8192 pixels per dimension.
-Audio, file transfer, discovery, SSH tunnel management, stored passwords, automatic reconnect,
-and Apple adaptive video extensions are outside this initial implementation.
-
-The shared terminal manager lives in `crates/omarchy-vnc-tui`; the core remains independent
-of both terminal and graphical UI toolkits.
-
-Omarchy palettes are loaded on startup from `$XDG_STATE_HOME/omarchy/current/theme/colors.toml`
-(default `~/.local/state`). Missing/malformed entries use a readable fallback. Live theme
-switching and identical native widget appearance across toolkits are not promised.
 
 License: **GPL-2.0-or-later**. See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY.md).
