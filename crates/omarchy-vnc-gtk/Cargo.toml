@@ -1,0 +1,10 @@
+[package]
+name = "omarchy-vnc-gtk"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+[dependencies]
+omarchy-vnc-core.workspace = true
+gtk = { package = "gtk4", version = "0.10" }
+zeroize = "1"
+omarchy-vnc-tui.workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "omarchy-vnc-egui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+[dependencies]
+omarchy-vnc-core.workspace = true
+eframe = { version = "0.33", default-features = false, features = ["glow", "wayland", "x11", "default_fonts"] }
+arboard = { version = "3", default-features = false, features = ["wayland-data-control"] }
+zeroize = "1"
+omarchy-vnc-tui.workspace = true
